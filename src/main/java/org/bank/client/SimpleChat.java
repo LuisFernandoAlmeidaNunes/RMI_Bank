@@ -1,4 +1,6 @@
-package org.example;
+// Exemplo para comunicacao intracamada
+
+package org.bank.client;
 
 import org.jgroups.JChannel;
 import org.jgroups.Message;
@@ -46,7 +48,7 @@ public class SimpleChat implements Receiver {
             }
         }
     }
-// rode com
+    // rode com mvn exec:java
     public static void main(String[] args) throws Exception {
         new SimpleChat().start();
     }
