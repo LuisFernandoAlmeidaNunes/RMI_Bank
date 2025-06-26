@@ -8,8 +8,21 @@ public class Server implements Hello {
 
     public Server() {}
 
-    public String sayHello() {
-        return "Hello, world!";
+    /* ======================== Funcoes implementadas pelo servidor ======================== */
+
+    public String sayHelloClient() {
+        System.out.println("Cliente atendido");
+        return "Cliente Conectado";
+    }
+
+    public String sayHelloModel() {
+        System.out.println("Model atendido");
+        return "Hi Lorena";
+    }
+
+    public String userLogin(int id) {
+        System.out.println("Model atendido");
+        return "Hi Lorena";
     }
 
     public static void main(String args[]) {
@@ -22,7 +35,6 @@ public class Server implements Hello {
             // Bind the remote object's stub in the registry
 
             Registry registry = LocateRegistry.createRegistry(1099);
-//            Registry registry = LocateRegistry.getRegistry();
             registry.rebind("rmi://localhost/server", stub);
 
             System.err.println("Server ready");
