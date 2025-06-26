@@ -11,8 +11,8 @@ public class Client {
 
         String host = (args.length < 1) ? null : args[0];
         try {
-            Registry registry = LocateRegistry.getRegistry(host);
-            Hello stub = (Hello) registry.lookup("Hello");
+            Registry registry = LocateRegistry.getRegistry(host, 1099);
+            Hello stub = (Hello) registry.lookup("rmi://localhost/server");
             String response = stub.sayHello();
             System.out.println("response: " + response);
         } catch (Exception e) {

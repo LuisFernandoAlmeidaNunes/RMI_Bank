@@ -16,14 +16,30 @@
 
     <build>
         <plugins>
-            <plugin>
+<!--            <plugin> &lt;!&ndash; Rodar como teste &ndash;&gt;-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>exec-maven-plugin</artifactId>-->
+<!--                <version>3.1.0</version>-->
+<!--                <configuration>-->
+<!--                    <mainClass>org.bank.client.SimpleChat</mainClass>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+            <plugin> <!-- Rodar como cliente -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>org.example.SimpleChat</mainClass>
+                    <mainClass>org.bank.client.Client</mainClass>
                 </configuration>
             </plugin>
+<!--            <plugin> &lt;!&ndash; Rodar como controller &ndash;&gt;-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>exec-maven-plugin</artifactId>-->
+<!--                <version>3.1.0</version>-->
+<!--                <configuration>-->
+<!--                    <mainClass>org.bank.client.Controller</mainClass>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 

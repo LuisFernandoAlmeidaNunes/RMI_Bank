@@ -23,7 +23,7 @@ public class Server implements Hello {
 
             Registry registry = LocateRegistry.createRegistry(1099);
 //            Registry registry = LocateRegistry.getRegistry();
-            registry.rebind("rmi://127.0.0.1/sever", stub);
+            registry.rebind("rmi://localhost/server", stub);
 
             System.err.println("Server ready");
         } catch (Exception e) {
